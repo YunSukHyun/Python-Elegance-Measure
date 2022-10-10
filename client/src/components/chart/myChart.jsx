@@ -7,9 +7,9 @@ import { Scatter } from 'react-chartjs-2';
 import {Chart} from 'chart.js/auto'
 import styled from 'styled-components';
 let chartList = [];
-
+const chartLabel = "Elegance(The lower the better except score)";
 const init = (eOptions, fileList, elegantData) => {
-  chartList.splice(0, fileList.length);
+  chartList = [];
   for(let i = 0; i < fileList.length; i++){
     let tmp = {}
     tmp['x'] = elegantData[fileList[i]][eOptions[0]];
@@ -28,7 +28,7 @@ const MyChart = () => {
     init(eOptions, fileList, elegantData);
     setMyData({
       datasets:[{
-        label: "Elegance(The lower the better)",
+        label: chartLabel,
         data: chartList,
         backgroundColor: ["red"],
         borderColor: "black",
@@ -39,9 +39,9 @@ const MyChart = () => {
   const [myData, setMyData] = useState(
     {
       datasets:[{
-        label: "Elegance(The lower the better)",
+        label: chartLabel,
         data: chartList,
-        backgroundColor: ["green"],
+        backgroundColor: ["red"],
         borderColor: "black",
         borderWidth: 1,
       }],
@@ -60,7 +60,7 @@ const MyChart = () => {
           padding: 15,
           // 범례 간 가로 간격을 조정할 수 있습니다. 범례의 상하 padding을 지정하는 기능은 따로 지원되지 않아요. ㅠㅠ
           font: { // 범례의 폰트 스타일도 지정할 수 있습니다.
-            family: "'Noto Sans KR', 'serif'",
+            family: "sans-serif",
             lineHeight: 1,
           },
         }
@@ -82,9 +82,9 @@ const MyChart = () => {
         title: {
           display: true,
           text: "x: "+eOptions[0],
-          color: '#911',
+          color: 'black',
           font: {
-            family: 'Comic Sans MS',
+            family: 'sans serif',
             size: 20,
             weight: 'bold',
             lineHeight: 1.2,
@@ -97,11 +97,12 @@ const MyChart = () => {
         title: {
           display: true,
           text: "y: " + eOptions[1],
-          color: '#191',
+          color: 'black',
           font: {
-            family: 'Comic Sans MS',
+            family: 'sans serif',
             size: 20,
             style: 'normal',
+            weight: 'bold',
             lineHeight: 1.2
           },
           padding: {top: 30, left: 0, right: 0, bottom: 0}
