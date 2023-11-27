@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
-function NavBar() {
+
+const NavBar = () => {
   return (
     <nav className="navbar">
       <div className="navbar_logo">
@@ -14,6 +15,6 @@ function NavBar() {
       <ul className="navbar_menu"></ul>
     </nav>
   );
-}
+};
 
 export default NavBar;

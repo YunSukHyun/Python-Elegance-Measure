@@ -1,7 +1,8 @@
 import React from "react";
 import NavBar from "../navbar/navbar";
 import styles from "./similarity.module.css";
-function Similarity() {
+
+const Similarity = () => {
   return (
     <>
       <NavBar />
@@ -13,5 +14,5 @@ function Similarity() {
       </div>
     </>
   );
-}
+};
 export default Similarity;

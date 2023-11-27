@@ -1,6 +1,7 @@
 import React from "react";
 import "./description.css";
-function Description() {
+
+const Description = () => {
   return (
     <div className="desBox">
       Description
@@ -14,6 +15,6 @@ function Description() {
       </ol>
     </div>
   );
-}
+};
 
 export default Description;

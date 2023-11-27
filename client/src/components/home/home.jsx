@@ -5,7 +5,8 @@ import NavBar from "../navbar/navbar";
 import { ToastContainer } from "react-toastify";
 import Footer from "../footer/footer";
 import styles from "./home.module.css";
-function Home() {
+
+const Home = () => {
   return (
     <section className={styles.body}>
       <NavBar />
@@ -17,6 +18,6 @@ function Home() {
       <Footer />
     </section>
   );
-}
+};
 
 export default Home;

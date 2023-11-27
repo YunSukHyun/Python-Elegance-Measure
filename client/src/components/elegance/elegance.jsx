@@ -5,7 +5,8 @@ import styles from "./elegance.module.css";
 import { ToastContainer } from "react-toastify";
 import Table from "../table/table";
 import MyChart from "../chart/myChart";
-function Elegance() {
+
+const Elegance = () => {
   return (
     <section className={styles.body}>
       <NavBar />
@@ -17,6 +18,6 @@ function Elegance() {
       <Footer />
     </section>
   );
-}
+};
 
 export default Elegance;

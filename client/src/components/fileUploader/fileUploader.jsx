@@ -3,7 +3,8 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "./fileUploader.css";
 import SelectOptions from "../selectOptions/selectOptions";
-function FileUploader() {
+
+const FileUploader = () => {
   const [files, setFiles] = useState([]);
   const [fileInputText, setFileInputText] = useState("form-control noShow");
   const [showOptions, setShowOptions] = useState(false);
@@ -50,6 +51,6 @@ function FileUploader() {
       {showOptions && <SelectOptions where="uploader" />}
     </>
   );
-}
+};
 
 export default FileUploader;
