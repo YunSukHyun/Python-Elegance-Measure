@@ -1,8 +1,9 @@
 import React, { useMemo } from "react";
 import { useLocation } from "react-router";
-import { COLUMNS, GROUPED_COLUMNS } from "../../column";
+import { COLUMNS, GROUPED_COLUMNS } from "./column";
 import { useSortBy, useTable } from "react-table";
 import "./table.css";
+
 const Table = () => {
   const location = useLocation().state.data;
   const elegantData = JSON.parse(location.data);
