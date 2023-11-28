@@ -5,9 +5,10 @@ import "./fileUploader.css";
 import SelectOptions from "../SelectOptions";
 
 const FileUploader = () => {
-  const [files, setFiles] = useState([]);
+  const [files, setFiles] = useState({});
   const [fileInputText, setFileInputText] = useState("form-control noShow");
   const [showOptions, setShowOptions] = useState(false);
+
   const onInputChange = (e) => {
     setFiles(e.target.files);
     setFileInputText("form-control");
@@ -16,14 +17,15 @@ const FileUploader = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     const data = new FormData();
-    for (let i = 0; i < files.length; i++) {
-      data.append("file", files[i]);
-    }
+    Object.values(files).forEach((file) => data.append("file", file));
+
     if (files.length === 0) {
       toast.error("Upload at least one file");
       return;
     }
+
     data.append("file", files);
+
     axios
       .post("//localhost:5000/upload", data)
       .then((e) => {
@@ -34,6 +36,7 @@ const FileUploader = () => {
         toast.error("Upload Error", e);
       });
   };
+
   return (
     <>
       <form method="post" action="#" id="#" onSubmit={onSubmit}>
@@ -46,7 +49,7 @@ const FileUploader = () => {
             multiple
           />
         </div>
-        <button className="snip">submit code</button>
+        <button className="btn">submit code</button>
       </form>
       {showOptions && <SelectOptions where="uploader" />}
     </>

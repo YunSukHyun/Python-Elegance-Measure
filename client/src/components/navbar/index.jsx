@@ -8,7 +8,6 @@ const NavBar = () => {
       <div className="navbar_logo">
         <i className="fa-regular fa-copy"></i>
         <Link className="link" to="/">
-          {" "}
           Python elegance measure
         </Link>
       </div>

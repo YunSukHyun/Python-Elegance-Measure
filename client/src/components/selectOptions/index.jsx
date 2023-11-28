@@ -13,7 +13,6 @@ const SelectOptions = ({ where }) => {
   const dispatch = useDispatch();
   const [option1, setOption1] = useState(options[0]);
   const [option2, setOption2] = useState(options[1]);
-  //const buttonClass = where === "elegant" ? "snip" : "snip invisible";
 
   const downloadJson = (e) => {
     e.preventDefault();
@@ -69,10 +68,10 @@ const SelectOptions = ({ where }) => {
         </select>
         <hr />
         <br />
-        <button onClick={onSubmit} className="snip">
+        <button onClick={onSubmit} className="btn">
           Check Elegance
         </button>
-        <button onClick={downloadJson} className="snip">
+        <button onClick={downloadJson} className="btn">
           Download JSON
         </button>
       </form>

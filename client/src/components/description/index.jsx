@@ -3,7 +3,7 @@ import "./description.css";
 
 const Description = () => {
   return (
-    <div className="desBox">
+    <section className="desBox">
       Description
       <ol>
         <li>Python 코드를 첨부합니다(다중 첨부 가능).</li>
@@ -13,7 +13,7 @@ const Description = () => {
         <li>점수를 차트와 테이블로 보여줍니다.</li>
         <div>(※ Score는 높을수록 그 외에는 낮은수록 우아한 코드입니다.)</div>
       </ol>
-    </div>
+    </section>
   );
 };
 
