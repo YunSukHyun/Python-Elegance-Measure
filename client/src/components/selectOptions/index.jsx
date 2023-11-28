@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import "./selectOptions.css";
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { change } from "../../store/optionsSlice";
 import FileDownload from "js-file-download";
+import Button from "../Button";
+import "./selectOptions.css";
 
 const SelectOptions = ({ where }) => {
   const navigate = useNavigate();
@@ -68,12 +69,8 @@ const SelectOptions = ({ where }) => {
         </select>
         <hr />
         <br />
-        <button onClick={onSubmit} className="btn">
-          Check Elegance
-        </button>
-        <button onClick={downloadJson} className="btn">
-          Download JSON
-        </button>
+        <Button onClick={onSubmit}>Check Elegance</Button>
+        <Button onClick={downloadJson}>Download JSON</Button>
       </form>
     </>
   );

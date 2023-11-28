@@ -3,6 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "./fileUploader.css";
 import SelectOptions from "../SelectOptions";
+import Button from "../Button";
 
 const FileUploader = () => {
   const [files, setFiles] = useState({});
@@ -39,7 +40,7 @@ const FileUploader = () => {
 
   return (
     <>
-      <form method="post" action="#" id="#" onSubmit={onSubmit}>
+      <form method="post">
         <div className="form-group files">
           <input
             type="file"
@@ -49,7 +50,7 @@ const FileUploader = () => {
             multiple
           />
         </div>
-        <button className="btn">submit code</button>
+        <Button onClick={onSubmit}>submit</Button>
       </form>
       {showOptions && <SelectOptions where="uploader" />}
     </>
