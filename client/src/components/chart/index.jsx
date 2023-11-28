@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { useSelector } from "react-redux";
 import "./myChart.css";
-import SelectOptions from "../selectOptions/selectOptions";
+import SelectOptions from "../SelectOptions";
 import { Scatter } from "react-chartjs-2";
 import { Chart } from "chart.js/auto";
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "./fileUploader.css";
-import SelectOptions from "../selectOptions/selectOptions";
+import SelectOptions from "../SelectOptions";
 
 const FileUploader = () => {
   const [files, setFiles] = useState([]);

@@ -1,9 +1,10 @@
 import React from "react";
-import Description from "../description/description";
-import FileUploader from "../fileUploader/fileUploader";
-import NavBar from "../navbar/navbar";
+import Description from "../../components/Description";
+import FileUploader from "../../components/FileUploader";
+import NavBar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+
 import { ToastContainer } from "react-toastify";
-import Footer from "../footer/footer";
 import styles from "./home.module.css";
 
 const Home = () => {

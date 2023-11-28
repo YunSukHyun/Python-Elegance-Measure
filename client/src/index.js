@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "@fortawesome/fontawesome-free/js/all.js";
 import "./index.css";
-import App from "./app";
 import { Provider } from "react-redux";
-import store from "./store";
+import store from "./store/store";
+import App from "./app";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import "./selectOptions.css";
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
-import { change } from "../../optionsSlice";
+import { change } from "../../store/optionsSlice";
 import FileDownload from "js-file-download";
 
 const SelectOptions = ({ where }) => {

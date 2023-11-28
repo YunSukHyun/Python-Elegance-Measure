@@ -1,10 +1,11 @@
 import React from "react";
-import Footer from "../footer/footer";
-import NavBar from "../navbar/navbar";
+import Footer from "../../components/Footer";
+import NavBar from "../../components/Navbar";
+import Table from "../../components/Table";
+import MyChart from "../../components/Chart";
+
 import styles from "./elegance.module.css";
 import { ToastContainer } from "react-toastify";
-import Table from "../table/table";
-import MyChart from "../chart/myChart";
 
 const Elegance = () => {
   return (
