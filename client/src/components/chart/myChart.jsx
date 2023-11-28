@@ -5,7 +5,7 @@ import "./myChart.css";
 import SelectOptions from "../selectOptions/selectOptions";
 import { Scatter } from "react-chartjs-2";
 import { Chart } from "chart.js/auto";
-import styled from "styled-components";
+
 let chartList = [];
 const chartLabel = "Elegance(The lower the better except score)";
 const init = (eOptions, fileList, elegantData) => {
@@ -115,16 +115,11 @@ const MyChart = () => {
     },
   };
   return (
-    <Container>
+    <div className="chart_container">
       <Scatter data={myData} options={options} />
       <SelectOptions where="elegant" />
-    </Container>
+    </div>
   );
 };
 
 export default MyChart;
-
-const Container = styled.div`
-  width: 100vw;
-  max-width: 99%;
-`;
